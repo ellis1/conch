@@ -22,7 +22,13 @@
 		<module>CCCRest-ear-web</module>
 		<module>CCCRest-ear-ear</module>
 	</modules>
-
+<repositories>
+<repository>
+    <id>JBoss Repo</id>
+    <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+    <name>JBoss Repo</name>
+ </repository>
+</repositories>
 
 	<properties>
 

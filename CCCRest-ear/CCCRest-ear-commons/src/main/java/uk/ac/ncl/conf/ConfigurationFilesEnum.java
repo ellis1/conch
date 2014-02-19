@@ -15,11 +15,12 @@ public enum ConfigurationFilesEnum {
 	SIMPLE_CONTRACT(System.getProperty("jboss.server.base.dir") + "/drools/upload/" + "SimpleContract.drl"),
 	EXTREMELY_SIMPLE_CONTRACT(System.getProperty("jboss.server.base.dir") + "/drools/upload/" + "ExtremelySimpleContract.drl"),
 	EXAMPLE_CONTRACT(System.getProperty("jboss.server.base.dir") + "/drools/upload/" + "ExampleContract.drl"),
-	BUYER_STORE_CONTRACT(System.getProperty("jboss.server.base.dir") + "/drools/upload/" + "BuyerStoreContractEx.drl"),
+	BUYER_STORE_CONTRACT(System.getProperty("jboss.server.base.dir") + "\\drools\\upload\\" + "BuyerStoreContractEx.drl"),
+	CHANGESET_XML_FILE(System.getProperty("jboss.server.base.dir") + "\\drools\\upload\\" + "change-set.xml"),
 	CHANGESET_XML("change-set.xml");
 
 	private String ruleFilePath;
-	private String RULES_FOLDER_PATH = "/drools/upload";
+	private String RULES_FOLDER_PATH = "\\drools\\upload";
 
 	/**
 	 * Instantiates a new rule files enum.

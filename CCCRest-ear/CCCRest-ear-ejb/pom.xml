@@ -22,7 +22,14 @@
 			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
 		</license>
 	</licenses>
-
+<repositories>
+<repository>
+    <id>JBoss Repo</id>
+    <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+    <name>JBoss Repo</name>
+ </repository>
+</repositories>
+	
 	<dependencyManagement>
 		<dependencies>
 			<!-- Define the version of JBoss' Java EE 6 APIs we want to use -->

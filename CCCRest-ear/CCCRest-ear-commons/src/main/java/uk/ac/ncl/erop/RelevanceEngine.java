@@ -28,6 +28,7 @@ import org.drools.runtime.conf.ClockTypeOption;
 import org.drools.time.SessionPseudoClock;
 import org.drools.runtime.rule.WorkingMemoryEntryPoint;
 
+import uk.ac.ncl.conf.ConfigurationFilesEnum;
 import uk.ac.ncl.util.CustomAgendaEventListener;
 import uk.ac.ncl.util.CustomWorkingMemoryEventListener;
 import uk.ac.ncl.xml.CCCResponse;
@@ -88,11 +89,12 @@ public class RelevanceEngine {
 
         // Create KnowledgeBuilder
         KnowledgeBuilder builder = KnowledgeBuilderFactory.newKnowledgeBuilder();
-
+        fileName = ConfigurationFilesEnum.CHANGESET_XML_FILE.getConfigurationFilePath();
         try {
-            builder.add(ResourceFactory.newFileResource(fileName), ResourceType.CHANGE_SET);
+        	builder.add(ResourceFactory.newFileResource(fileName), ResourceType.CHANGE_SET);
+        	 
         } catch (Exception e) {
-            ErrorMessageManager.fatalErrorMsg("Exception opening file resource " + fileName, e);
+            ErrorMessageManager.fatalErrorMsg("Exception opening file resource " + ConfigurationFilesEnum.BUYER_STORE_CONTRACT.getConfigurationFilePath(), e);
         }
 
         // Check if the compilation was successful
